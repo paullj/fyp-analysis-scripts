@@ -1,49 +1,33 @@
 # %% Import libraries
 import numpy as np
 import matplotlib.pyplot as plt
+import get_material_impedance as model
 
 # %% Define variables
 # Sweep settings
-min_freq = 1e7
-max_freq = 110e7
-num_points = 201
+# min_freq = 40       # Sweep start frequency (Hz)
+# max_freq = 110e7    # Sweep end frequency (Hz)
+num_points = 20001    # Number of points between start and end
 
 # Material Properties
-eS_33r = -3.36391 # Relative dielectric constant
-e_0 = 8.854e-12 # Dielectric constant of vacuum
-C_33 = 194e9 # Elastic stiffness coefficient
-E_33 = 5.11e9 # Piezoelectric coefficient 
-rho = 5700 # Density
+epsilon_33 = 3      # Relative dielectric constant
+c_33 = 194e9        # Elastic stiffness coefficient (N/m^2)
+e_33 = 5.11e12      # Piezoelectric coefficient (pC/m^2)
+rho = 2928          # Density (kg/m^3)
 
-delta_m = 0.1 # Mechanical losses
-delta_e = 0.1 # Dielectric losses
+delta_m = 0.10      # Mechanical losses
+delta_e = 0.10      # Dielectric losses
 
 # Material Geometry
-A = 97.022e-6 # Electrode area
-t = 0.047e-3 # Thickness
+A = 100e-6       # Electrode area (m^2)
+t = 2e-3            # Thickness (m)
 
-# %% Calculate impedance
-k_t = E_33 / np.sqrt(C_33*eS_33r, dtype=complex)
-v_t = np.sqrt(C_33 / rho, dtype=complex)
-
-delta = (1-k_t**2)*delta_m + (k_t**2)*delta_e
-
-C_33s = C_33 * (1+ 1j * delta_m)
-eS_33s = C_33 * (1+ 1j * delta_e)
-
-k_ts2 = (k_t**2)/((1+1j*delta)*(1-1j*delta_e))
-v_ts = v_t * np.sqrt(1+1j*delta)
-
-freq = np.linspace(min_freq, max_freq, num_points)
-omega = 2 * np.pi * freq
-
-Ys = ((1j*omega*eS_33r*e_0*A)/t) * ((1-k_ts2) * 1/((np.tan(omega*t/(2*v_ts))/(omega*t/(2*v_ts)))))
-Zs = 1 / Ys
+(freq, Z) = model.get_impedance(epsilon_33, c_33, e_33, rho, A, t, delta_e, delta_m, num_points=num_points)
 
 # %% Plot results
 fig = plt.figure()
-plt.plot(freq[1:], Zs.real[1:], label="Real Component")
-plt.plot(freq[1:], Zs.imag[1:], label="Imaginary Component")
+plt.plot(freq[1:], Z.real[1:], label="Real Component")
+plt.plot(freq[1:], Z.imag[1:], label="Imaginary Component")
 plt.xscale("log")
 
 plt.legend(loc='best', fontsize=10, frameon=False)
