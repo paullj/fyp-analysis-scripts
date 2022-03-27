@@ -1,0 +1,4 @@
+Name,Thickness,Area,Density,Stiffness,Path
+Reference PZT,1.12e-3,314.16e-6,7500,60e9,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Analysis/Processed Data/ref_data.csv
+KNN Ceramic,1.34e-3,97.022e-6,4520,98.5e9,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Analysis/Processed Data/k_3i_data.csv
+BCZT Ceramic,1.88e-3,76.553e-6,5570,87e9,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Analysis/Processed Data/bczt_1_data.csv

@@ -80,7 +80,8 @@ def plot_against_frequency(samples, min_freq, max_freq, column, label, override_
             samples['Group'] == group) & (samples['Include'] == 'X')]
         if len(samples_in_group) == 0:
             continue
-        fig = plt.figure(j, figsize=(7, 5), dpi=300)
+        # fig = plt.figure(j, figsize=(7, 5), dpi=300)
+        fig = plt.figure()
 
         for i in samples_in_group:
             _df = sample_data[i]
@@ -94,6 +95,7 @@ def plot_against_frequency(samples, min_freq, max_freq, column, label, override_
 
             plt.plot(df["Frequency"], df[column], linewidth=0.5,
                      marker=marker_list[i % len(marker_list)], markersize=5, color=color_list[i % len(color_list)], label=samples.iloc[i]["Name"], zorder=3)
+            plt.yscale("log")
             plt.xscale("log")
             # add the legend (will default to 'best' location)
             plt.legend(loc='best', fontsize=10, frameon=False)

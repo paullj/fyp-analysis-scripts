@@ -1,0 +1,20 @@
+Include,Group,Name,Thickness,Area,Min Frequency,Max Frequency,Path
+X,PDMS and KNLN,PK_1,1.059,50.519,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PK_1.TXT
+X,PDMS and KNLN,PK_2,1.029,50.011,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PK_2.TXT
+X,PDMS and KNLN,PK_3,1.04,49.8,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PK_3.TXT
+X,PDMS and KNLN,PK_4,1.059,47.192,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PK_4.TXT
+X,PDMS and KNLN,PK_5,1.062,49.858,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PK_5.TXT
+X,KNN Ceramic,K_3,1.34,97.022,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/K_3.TXT
+X,KNN Ceramic,K_9,1.25,97.0404,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/K_9.TXT
+X,BT Ceramic,BT_1,1.99,92.479,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/BT_1.TXT
+X,BT Ceramic,BT_2,1.95,91.9,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/BT_2.TXT
+X,BT Ceramic,BT_3,1.94,92.479,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/BT_3.TXT
+,BT Ceramic,BT_4,1.97,94.618,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/BT_4.TXT
+X,PZT and Pu,PZT_5i,1.97,86.515,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PZT_5i.TXT
+X,PZT and Pu,PZT_5ii,1.37,86.414,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PZT_5ii.TXT
+X,PZT and Pu,PZT_10i,1.61,82.72,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PZT_10i.TXT
+X,PZT and Pu,PZT_10i,1.57,87.327,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PZT_10i.TXT
+X,PZT and Pu,PZT_20,1.42,61.594,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PZT_20.TXT
+X,PZT and Pu,PZT_30,1.43,77.361,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PZT_30.TXT
+X,PZT and Pu,PZT_40i,1.28,88.109,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PZT_40i.TXT
+X,PZT and Pu,PZT_40ii,1.27,95.55,5.00E+06,5.00E+07,/Users/paullj/Library/CloudStorage/OneDrive-UniversityofBath/FYP/Experiments/Data/21-02-2022 Agilent/Input/PZT_40ii.TXT
