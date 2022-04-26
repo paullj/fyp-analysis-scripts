@@ -31,6 +31,6 @@ def get_impedance(eps_33, c_33, e_33, rho, A, t, delta_m, delta_e, min_freq=40, 
     # print(x)
 
     R = 0
-    f_1 = 1/(2*t)*(1-R-(4*k_t**2/(2*np.pi)))*(c_33/rho)**0.5
+    f_1 = 1/(2*t)*(1-R-(4*k_t**2/(np.pi**2)))*(c_33/rho)**0.5
     
     return (freq, Z, f_1)

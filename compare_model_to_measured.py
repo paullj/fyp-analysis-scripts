@@ -10,6 +10,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import get_material_impedance as model
 
 input_file = 'samples_to_model.csv'  # A file that points to data files for each sample
 
@@ -70,24 +71,24 @@ for i, df in enumerate(sample_data):
         z_plot.axvline(x=f, linestyle="-.", color="gray", zorder=0)
         theta_plot.axvline(x=f, linestyle="-.", color="gray", zorder=0)
 
-    # num_points = 20001    # Number of points between start and end
+    num_points = 20001    # Number of points between start and end
 
-    # epsilon_33 = 1200 #173 #400    # Relative dielectric constant
-    # d_33 = 515               # Piezoelectric coefficient (pC/N)
+    epsilon_33 = 1200 #173 #400    # Relative dielectric constant
+    d_33 = 515               # Piezoelectric coefficient (pC/N)
 
-    # delta_m = 2            # Mechanical losses
-    # delta_e = 0.08           # Dielectric losses
+    delta_m = 0.50            # Mechanical losses
+    delta_e = 0.05           # Dielectric losses
 
-    # fixture_weight = 46.02*9.81
-    # fixture_stress = fixture_weight/ (np.pi*2**2)
-    # e_33 = d_33 * fixture_stress
+    fixture_weight = 46.02*9.81
+    fixture_stress = fixture_weight/ (np.pi*2**2)
+    e_33 = d_33 * fixture_stress
 
-    # (freq, Z, f_1) = model.get_impedance(epsilon_33, c_33, e_33, rho, A, t, delta_e, delta_m, min_freq=min_freq, max_freq=max_freq, num_points=num_points)
+    (freq, Z, f_1) = model.get_impedance(epsilon_33, c_33, e_33, rho, A, t, delta_e, delta_m, min_freq=min_freq, max_freq=max_freq, num_points=num_points)
 
-    # z_plot.plot(freq[1:], np.sqrt(Z.real[1:]**2+Z.imag[1:]**2), label="Model", linestyle="--", color='#ff8c8e')
-    # z_plot.legend(loc='lower left', fontsize=10, frameon=True)
-    # theta_plot.plot(freq[1:], np.degrees(np.arctan(Z.imag[1:]/Z.real[1:])), label="Model", linestyle="--", color='#8ce5ff')
-    # theta_plot.legend(loc='upper left', fontsize=10, frameon=True)
+    z_plot.plot(freq[1:], np.sqrt(Z.real[1:]**2+Z.imag[1:]**2), label="Model", linestyle="--", color='#ff8c8e')
+    z_plot.legend(loc='lower left', fontsize=10, frameon=True)
+    theta_plot.plot(freq[1:], np.degrees(np.arctan(Z.imag[1:]/Z.real[1:])), label="Model", linestyle="--", color='#8ce5ff')
+    theta_plot.legend(loc='upper left', fontsize=10, frameon=True)
 
 #     BCZT Ceramic,1.88,76.553,7500,60000000000
 # BT Polymer,0.043,182.605,7500,60000000000
